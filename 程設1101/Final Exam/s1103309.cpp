@@ -404,7 +404,7 @@ void makeReservation( vector< AvailRoom > &availRooms, vector< Reservation > &re
 	   }
 	   int selection;
 	   do {
-		   cout << "\nSelect Room Type¡G" << endl;
+		   cout << "\nSelect Room TypeÂ¡G" << endl;
 		   if (compMinNumRooms(newReservation, availRooms, 1) != 0) {
 				cout << "1. Superior Room" << endl;
 		   }
@@ -443,11 +443,11 @@ void makeReservation( vector< AvailRoom > &availRooms, vector< Reservation > &re
 		   availRooms[t].numAvailRooms[selection] -= num;
 	   }
 
-	   cout << "\nID Number¡G";
+	   cout << "\nID NumberÂ¡G";
 	   cin >> newReservation.id;
-	   cout << "\nName¡G";
+	   cout << "\nNameÂ¡G";
 	   cin >> newReservation.name;
-	   cout << "\nMobile Phone¡G";
+	   cout << "\nMobile PhoneÂ¡G";
 	   cin >> newReservation.mobile;
 	   cin.ignore();
 
@@ -621,7 +621,7 @@ int numNights( Reservation reservation )
 
 void reservationInquiry( const vector< Reservation > &reservations, const Date &currentDate )
 {
-   cout << "\nEnter Your ID Number¡G";
+   cout << "\nEnter Your ID NumberÂ¡G";
    char id[ 12 ];
    cin >> id;
    cin.ignore();

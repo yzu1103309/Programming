@@ -1,0 +1,92 @@
+#welcome{
+  margin-top: 20px;
+  font-size: 30px;
+}
+#addEvent{
+  width: 1000px;
+  height: 40px;
+  margin: 0 auto;
+  background: #97CBFF;
+  padding-top: 12px;
+  border: 0px solid white;
+  border-radius: 15px;
+}
+h2 {
+  text-align: center;
+  margin: 0 0;
+}
+#list{
+  width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  border-collapse: collapse;
+}
+table tr td{
+  border-bottom: 2px dashed grey;
+  border-top: 2px dashed grey ;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+.hidden{
+  display: none;
+}
+#todo,#editT{
+  height: 25px;
+  border: 1px solid white;
+  border-radius: 10px;
+padding-top: 3px;
+font-size: 18px;
+font-weight: bold;
+text-align: center;
+}
+#date,#editD{
+  height: 25px;
+  border: 1px solid white;
+  border-radius: 10px;
+font-size: 18px;
+font-weight: bold;
+text-align: center;
+}
+.addbtn{
+  height: 25px;
+  width: 150px;
+  border: 1px solid #1B6DC1;
+  background: #1B6DC1;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #FFFFFF;
+  padding: 0 10px;
+  margin-left: 20px;
+}
+.addbtn:hover{
+  background: #FFFFFF;
+  border: 1px solid white;
+  color: #1B6DC1;
+}
+.delete{
+  height: 25;
+    width: 70;
+    border: 1px solid #1B6DC1;
+    background: #1B6DC1;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    color: #FFFFFF;
+    padding: 0 10px;
+    margin-left: 10px;
+}
+.delete:hover{
+  background: #97CBFF;
+  border: 1px solid white;
+  color: #1B6DC1;
+}
+#td2{
+  padding-top: 20px;
+}
+#td1{
+  width: 700px;
+}

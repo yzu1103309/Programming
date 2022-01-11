@@ -1,0 +1,42 @@
+<html>
+  <head>
+      <meta charset="utf-8">
+      <title>To Do List</title>
+      <link rel="stylesheet" type="text/css" href="banner.css">
+      <link rel="stylesheet" type="text/css" href="form.css">
+      <link rel="stylesheet" type="text/css" href="content.css">
+      <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="ajax.js"></script>
+      <style>
+      div#box1{
+   width:400PX;
+   height:230PX;
+  }
+     </style>
+  </head>
+  <body>
+  <div id="content">
+    <div id="DIV_BIG">
+     <p>	<img id="banner" src="logo.png" alt="tilte" ></p>
+     <div id="link"><a href="sign-up.html"> CREATE AN ACCOUNT </a></div>
+    </div>
+  <div>
+    <h1>Login</h1>
+  </div>
+      <form>
+      <div id=box1>
+        <p class="form"><label for="Email"><b>Email</b></label><br>
+        <input type="email" name="Email" id="Email" placeholder="Enter Email" required>
+        </p>
+        <p class="form">
+        <label for="password"><b>Password</b></label><br>
+        <input type="password" placeholder="Enter Password" name="password" id="password" required>
+        </p>
+        <input id = "submit" type="button" class="registerbtn" value = "Login" onclick="progress()">
+      </div>
+   </form>
+   
+   
+   </div> 
+  </body>
+</html>

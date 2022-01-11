@@ -1,0 +1,36 @@
+#DIV_BIG{
+             
+      height:130px;
+      padding-top:1px;
+      padding-bottom: 1px;
+      padding-left: 20px;
+      padding-right: 50px;
+      background-color:#97CBFF;
+      position:relative;
+    }
+        
+#banner{
+      height: 100px;
+      float: left;
+    }
+#link a {
+  color: #FFFFFF;
+  font-size: 25px;
+  text-decoration: none;
+  font-weight: bold;
+}
+#link {
+  background: #1B6DC1;
+  float: right;
+  position: relative;
+  top: 50px;
+  padding: 3px 10px;
+  border: 0px solid white;
+  border-radius: 10px;
+}
+#link:hover{
+  background: #FFFFFF;
+}
+#link:hover a{
+  color: #1B6DC1;
+}

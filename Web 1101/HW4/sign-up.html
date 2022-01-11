@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Sign up</title>
+    <link rel="stylesheet" type="text/css" href="banner.css">
+    <link rel="stylesheet" type="text/css" href="form.css">
+    <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script>
+    function progress() {
+      $( "#error" ).html(" ");
+      var Email = $("#Email").val();
+      var name = $("#name").val();
+      var password = $("#password").val();
+      var password2 = $("#password2").val();
+      password = ""+password;
+      password2 = ""+password2;
+      console.log(password2);
+	    $.ajax({
+		    url: "create.php",
+		    data: {
+		      Email: Email,
+		      name: name,
+		      password:password,
+		      password2:password2
+	      },
+		    type: "POST",
+		    datatype: "html",
+	      success: function( output ) {
+		      $( "#error" ).html(output);
+	      },
+		    error : function(){
+		    alert( "Request failed." );
+		    }
+	    });
+	  }
+    </script>
+  <style>
+  div#box1{
+   width:400PX;
+   height:380PX;
+  }
+  </style>
+  </head>
+  <body>
+    <div id="DIV_BIG">
+     <p>	<img id="banner" src="logo.png" alt="tilte" ></p>
+     <div id="link"><a href="index.html"> LOGIN NOW </a></div>
+     </div>
+  <form action="#" method="post">
+    
+  <div>
+    <h1 style="margin-top:40px;">Sign-up</h1> 
+    <div id="error"></div>
+  </div>
+  
+    <div id="box1">
+       <div class="form">   
+       <label for="person"><b>Name</b></label><br> 
+      <input type="text" id="name" name="name" placeholder="Enter Name" required />
+   </div>
+       
+  <div class="form">
+    <label for="account"><b>Email</b></b></label><br>
+    <input type="text" name="Email" id="Email"placeholder="Enter Email"required>
+  </div>
+  <div class="form">
+    <label for="password"><b>Password</b></label><br>
+    <input type="password" placeholder="Enter Password" name="password" id="password" required>
+  </div>
+  <div class="form">
+    <label for="password"><b>Confirm Password</b></label><br>
+    <input type="password" placeholder="Comfirm Password" name="password2" id="password2" required>
+  </div>
+  
+  <input id = "submit" type="button" class="registerbtn" value = "Create an account" onclick="progress()">
+   </div>
+</form>
+    
+  </body>
+</html>

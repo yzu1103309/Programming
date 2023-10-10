@@ -1,0 +1,23 @@
+|Sequence_detector
+clk => match~reg0.CLK
+clk => str_out[0]~reg0.CLK
+clk => str_out[1]~reg0.CLK
+clk => str_out[2]~reg0.CLK
+clk => cs~5.DATAIN
+str_in => str_out[0]~reg0.DATAIN
+str_in => Selector2.IN1
+str_in => Selector1.IN2
+str_in => match~0.IN1
+str_in => ns.s3.DATAB
+str_in => Selector0.IN1
+rst => match~reg0.ACLR
+rst => str_out[0]~reg0.ACLR
+rst => str_out[1]~reg0.ACLR
+rst => str_out[2]~reg0.ACLR
+rst => cs~9.DATAIN
+str_out[0] <= str_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+str_out[1] <= str_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+str_out[2] <= str_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+match <= match~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

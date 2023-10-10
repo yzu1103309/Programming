@@ -1,0 +1,48 @@
+|adder4
+A[0] => A[0]~3.IN1
+A[1] => A[1]~2.IN1
+A[2] => A[2]~1.IN1
+A[3] => A[3]~0.IN1
+B[0] => B[0]~3.IN1
+B[1] => B[1]~2.IN1
+B[2] => B[2]~1.IN1
+B[3] => B[3]~0.IN1
+S[0] <= fadd:r0.S
+S[1] <= fadd:r1.S
+S[2] <= fadd:r2.S
+S[3] <= fadd:r3.S
+Cout <= fadd:r3.Cout
+
+
+|adder4|fadd:r0
+Ci => Add0.IN1
+A => Add0.IN2
+B => Add1.IN4
+S <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder4|fadd:r1
+Ci => Add0.IN1
+A => Add0.IN2
+B => Add1.IN4
+S <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder4|fadd:r2
+Ci => Add0.IN1
+A => Add0.IN2
+B => Add1.IN4
+S <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder4|fadd:r3
+Ci => Add0.IN1
+A => Add0.IN2
+B => Add1.IN4
+S <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+

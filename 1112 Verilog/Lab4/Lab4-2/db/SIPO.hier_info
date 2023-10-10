@@ -1,0 +1,43 @@
+|SIPO
+in => in~0.IN1
+En => En~0.IN4
+clk => clk~0.IN4
+rst => rst~0.IN4
+Q[0] <= Q[0]~2.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~1.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= D_F:comb_6.port1
+
+
+|SIPO|D_F:comb_3
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+En => Q~reg0.ENA
+clk => Q~reg0.CLK
+rst => ~NO_FANOUT~
+
+
+|SIPO|D_F:comb_4
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+En => Q~reg0.ENA
+clk => Q~reg0.CLK
+rst => ~NO_FANOUT~
+
+
+|SIPO|D_F:comb_5
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+En => Q~reg0.ENA
+clk => Q~reg0.CLK
+rst => ~NO_FANOUT~
+
+
+|SIPO|D_F:comb_6
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+En => Q~reg0.ENA
+clk => Q~reg0.CLK
+rst => ~NO_FANOUT~
+
+

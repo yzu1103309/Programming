@@ -1,0 +1,61 @@
+|add4
+Sum[0] <= full_adder:FAO.sum
+Sum[1] <= full_adder:FA1.sum
+Sum[2] <= full_adder:FA2.sum
+Sum[3] <= full_adder:FA3.sum
+C_out <= full_adder:FA3.c_out
+A[0] => A[0]~3.IN1
+A[1] => A[1]~2.IN1
+A[2] => A[2]~1.IN1
+A[3] => A[3]~0.IN1
+B[0] => B[0]~3.IN1
+B[1] => B[1]~2.IN1
+B[2] => B[2]~1.IN1
+B[3] => B[3]~0.IN1
+C_in => C_in~0.IN1
+
+
+|add4|full_adder:FAO
+sum <= sum~1.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out~2.DB_MAX_OUTPUT_PORT_TYPE
+a => sum~0.IN0
+a => c_out~0.IN0
+b => sum~0.IN1
+b => c_out~0.IN1
+c_in => sum~1.IN1
+c_in => c_out~1.IN1
+
+
+|add4|full_adder:FA1
+sum <= sum~1.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out~2.DB_MAX_OUTPUT_PORT_TYPE
+a => sum~0.IN0
+a => c_out~0.IN0
+b => sum~0.IN1
+b => c_out~0.IN1
+c_in => sum~1.IN1
+c_in => c_out~1.IN1
+
+
+|add4|full_adder:FA2
+sum <= sum~1.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out~2.DB_MAX_OUTPUT_PORT_TYPE
+a => sum~0.IN0
+a => c_out~0.IN0
+b => sum~0.IN1
+b => c_out~0.IN1
+c_in => sum~1.IN1
+c_in => c_out~1.IN1
+
+
+|add4|full_adder:FA3
+sum <= sum~1.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out~2.DB_MAX_OUTPUT_PORT_TYPE
+a => sum~0.IN0
+a => c_out~0.IN0
+b => sum~0.IN1
+b => c_out~0.IN1
+c_in => sum~1.IN1
+c_in => c_out~1.IN1
+
+

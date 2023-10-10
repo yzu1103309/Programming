@@ -1,0 +1,7 @@
+
+State Machine - |MOORE_BIN1|CS
+Name CS.S3 CS.S2 CS.S1 CS.S0 
+CS.S0 0 0 0 0 
+CS.S1 0 0 1 1 
+CS.S2 0 1 0 1 
+CS.S3 1 0 0 1 

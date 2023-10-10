@@ -1,0 +1,7 @@
+
+State Machine - |Sequence_detector|cs
+Name cs.s3 cs.s2 cs.s1 cs.s0 
+cs.s0 0 0 0 0 
+cs.s1 0 0 1 1 
+cs.s2 0 1 0 1 
+cs.s3 1 0 0 1 

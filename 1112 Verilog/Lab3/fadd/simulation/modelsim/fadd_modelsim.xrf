@@ -1,0 +1,11 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/wilso/Documents/courses/1112/Digital Circuit/Lab3/fadd/fadd.v
+source_file = 1, C:/Users/wilso/Documents/courses/1112/Digital Circuit/Lab3/fadd/db/fadd.cbx.xml
+design_name = fadd
+instance = comp, \S~output , S~output, fadd, 1
+instance = comp, \Cout~output , Cout~output, fadd, 1
+instance = comp, \A~input , A~input, fadd, 1
+instance = comp, \B~input , B~input, fadd, 1
+instance = comp, \Ci~input , Ci~input, fadd, 1
+instance = comp, \Add1~0 , Add1~0, fadd, 1
+instance = comp, \Add1~1 , Add1~1, fadd, 1

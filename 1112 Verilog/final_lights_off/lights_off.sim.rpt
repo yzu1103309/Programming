@@ -1,0 +1,355 @@
+Simulator report for lights_off
+Mon May 15 16:57:13 2023
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 142 nodes    ;
+; Simulation Coverage         ;      79.47 % ;
+; Total Number of Transitions ; 2089         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone III  ;
+; Device                      ; EP3C16F484C6 ;
++-----------------------------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                          ;
++--------------------------------------------------------------------------------------------+----------------+---------------+
+; Option                                                                                     ; Setting        ; Default Value ;
++--------------------------------------------------------------------------------------------+----------------+---------------+
+; Simulation mode                                                                            ; Timing         ; Timing        ;
+; Start time                                                                                 ; 0 ns           ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF           ;               ;
+; Vector input source                                                                        ; lights_off.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On             ; On            ;
+; Check outputs                                                                              ; Off            ; Off           ;
+; Report simulation coverage                                                                 ; On             ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On             ; On            ;
+; Display missing 1-value coverage report                                                    ; On             ; On            ;
+; Display missing 0-value coverage report                                                    ; On             ; On            ;
+; Detect setup and hold time violations                                                      ; Off            ; Off           ;
+; Detect glitches                                                                            ; Off            ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off            ; Off           ;
+; Generate Signal Activity File                                                              ; Off            ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off            ; Off           ;
+; Group bus channels in simulation results                                                   ; Off            ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On             ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE     ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off            ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off            ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto           ; Auto          ;
+; Interconnect Delay Model Type                                                              ; Transport      ; Transport     ;
+; Cell Delay Model Type                                                                      ; Transport      ; Transport     ;
++--------------------------------------------------------------------------------------------+----------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      79.47 % ;
+; Total nodes checked                                 ; 142          ;
+; Total output ports checked                          ; 151          ;
+; Total output ports with complete 1/0-value coverage ; 120          ;
+; Total output ports with no 1/0-value coverage       ; 30           ;
+; Total output ports with no 1-value coverage         ; 30           ;
+; Total output ports with no 0-value coverage         ; 31           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                    ;
++------------------------------+------------------------------+------------------+
+; Node Name                    ; Output Port Name             ; Output Port Type ;
++------------------------------+------------------------------+------------------+
+; |lights_off|Add0~0           ; |lights_off|Add0~0           ; combout          ;
+; |lights_off|Add0~0           ; |lights_off|Add0~1           ; cout             ;
+; |lights_off|Add0~2           ; |lights_off|Add0~2           ; combout          ;
+; |lights_off|Add0~2           ; |lights_off|Add0~3           ; cout             ;
+; |lights_off|Add0~4           ; |lights_off|Add0~4           ; combout          ;
+; |lights_off|Add0~4           ; |lights_off|Add0~5           ; cout             ;
+; |lights_off|Add0~6           ; |lights_off|Add0~6           ; combout          ;
+; |lights_off|Add0~6           ; |lights_off|Add0~7           ; cout             ;
+; |lights_off|Add0~8           ; |lights_off|Add0~8           ; combout          ;
+; |lights_off|Add0~8           ; |lights_off|Add0~9           ; cout             ;
+; |lights_off|Add0~10          ; |lights_off|Add0~10          ; combout          ;
+; |lights_off|Add0~10          ; |lights_off|Add0~11          ; cout             ;
+; |lights_off|Add0~12          ; |lights_off|Add0~12          ; combout          ;
+; |lights_off|lights[0]~reg0   ; |lights_off|lights[0]~reg0   ; q                ;
+; |lights_off|lights[1]~reg0   ; |lights_off|lights[1]~reg0   ; q                ;
+; |lights_off|lights[2]~reg0   ; |lights_off|lights[2]~reg0   ; q                ;
+; |lights_off|lights[3]~reg0   ; |lights_off|lights[3]~reg0   ; q                ;
+; |lights_off|lights[4]~reg0   ; |lights_off|lights[4]~reg0   ; q                ;
+; |lights_off|lights[5]~reg0   ; |lights_off|lights[5]~reg0   ; q                ;
+; |lights_off|lights[6]~reg0   ; |lights_off|lights[6]~reg0   ; q                ;
+; |lights_off|lights[7]~reg0   ; |lights_off|lights[7]~reg0   ; q                ;
+; |lights_off|lights[8]~reg0   ; |lights_off|lights[8]~reg0   ; q                ;
+; |lights_off|lights[9]~reg0   ; |lights_off|lights[9]~reg0   ; q                ;
+; |lights_off|last[1]          ; |lights_off|last[1]          ; q                ;
+; |lights_off|last[0]          ; |lights_off|last[0]          ; q                ;
+; |lights_off|lights~0         ; |lights_off|lights~0         ; combout          ;
+; |lights_off|rd[0]            ; |lights_off|rd[0]            ; q                ;
+; |lights_off|rd[1]            ; |lights_off|rd[1]            ; q                ;
+; |lights_off|rd[2]            ; |lights_off|rd[2]            ; q                ;
+; |lights_off|rd[3]            ; |lights_off|rd[3]            ; q                ;
+; |lights_off|WideOr0~0        ; |lights_off|WideOr0~0        ; combout          ;
+; |lights_off|rd[4]            ; |lights_off|rd[4]            ; q                ;
+; |lights_off|lights~1         ; |lights_off|lights~1         ; combout          ;
+; |lights_off|lights~2         ; |lights_off|lights~2         ; combout          ;
+; |lights_off|lights~3         ; |lights_off|lights~3         ; combout          ;
+; |lights_off|lights~5         ; |lights_off|lights~5         ; combout          ;
+; |lights_off|lights~6         ; |lights_off|lights~6         ; combout          ;
+; |lights_off|lights~7         ; |lights_off|lights~7         ; combout          ;
+; |lights_off|lights~8         ; |lights_off|lights~8         ; combout          ;
+; |lights_off|last[3]          ; |lights_off|last[3]          ; q                ;
+; |lights_off|always0~0        ; |lights_off|always0~0        ; combout          ;
+; |lights_off|lights~10        ; |lights_off|lights~10        ; combout          ;
+; |lights_off|lights~11        ; |lights_off|lights~11        ; combout          ;
+; |lights_off|last[4]          ; |lights_off|last[4]          ; q                ;
+; |lights_off|lights~13        ; |lights_off|lights~13        ; combout          ;
+; |lights_off|lights~14        ; |lights_off|lights~14        ; combout          ;
+; |lights_off|lights~15        ; |lights_off|lights~15        ; combout          ;
+; |lights_off|last[5]          ; |lights_off|last[5]          ; q                ;
+; |lights_off|always0~2        ; |lights_off|always0~2        ; combout          ;
+; |lights_off|lights~17        ; |lights_off|lights~17        ; combout          ;
+; |lights_off|lights~18        ; |lights_off|lights~18        ; combout          ;
+; |lights_off|always0~3        ; |lights_off|always0~3        ; combout          ;
+; |lights_off|last[6]          ; |lights_off|last[6]          ; q                ;
+; |lights_off|lights~20        ; |lights_off|lights~20        ; combout          ;
+; |lights_off|lights~21        ; |lights_off|lights~21        ; combout          ;
+; |lights_off|lights~22        ; |lights_off|lights~22        ; combout          ;
+; |lights_off|last[7]          ; |lights_off|last[7]          ; q                ;
+; |lights_off|always0~4        ; |lights_off|always0~4        ; combout          ;
+; |lights_off|lights~24        ; |lights_off|lights~24        ; combout          ;
+; |lights_off|last[8]          ; |lights_off|last[8]          ; q                ;
+; |lights_off|lights~25        ; |lights_off|lights~25        ; combout          ;
+; |lights_off|lights~28        ; |lights_off|lights~28        ; combout          ;
+; |lights_off|last[9]          ; |lights_off|last[9]          ; q                ;
+; |lights_off|lights~31        ; |lights_off|lights~31        ; combout          ;
+; |lights_off|lights~32        ; |lights_off|lights~32        ; combout          ;
+; |lights_off|lights~33        ; |lights_off|lights~33        ; combout          ;
+; |lights_off|lights~35        ; |lights_off|lights~35        ; combout          ;
+; |lights_off|last[1]~0        ; |lights_off|last[1]~0        ; combout          ;
+; |lights_off|last[0]~1        ; |lights_off|last[0]~1        ; combout          ;
+; |lights_off|last[0]~2        ; |lights_off|last[0]~2        ; combout          ;
+; |lights_off|last[3]~4        ; |lights_off|last[3]~4        ; combout          ;
+; |lights_off|last[4]~5        ; |lights_off|last[4]~5        ; combout          ;
+; |lights_off|last[5]~6        ; |lights_off|last[5]~6        ; combout          ;
+; |lights_off|last[6]~7        ; |lights_off|last[6]~7        ; combout          ;
+; |lights_off|last[7]~8        ; |lights_off|last[7]~8        ; combout          ;
+; |lights_off|last[8]~9        ; |lights_off|last[8]~9        ; combout          ;
+; |lights_off|last[9]~10       ; |lights_off|last[9]~10       ; combout          ;
+; |lights_off|lights[0]~output ; |lights_off|lights[0]~output ; o                ;
+; |lights_off|lights[0]        ; |lights_off|lights[0]        ; padout           ;
+; |lights_off|lights[1]~output ; |lights_off|lights[1]~output ; o                ;
+; |lights_off|lights[1]        ; |lights_off|lights[1]        ; padout           ;
+; |lights_off|lights[2]~output ; |lights_off|lights[2]~output ; o                ;
+; |lights_off|lights[2]        ; |lights_off|lights[2]        ; padout           ;
+; |lights_off|lights[3]~output ; |lights_off|lights[3]~output ; o                ;
+; |lights_off|lights[3]        ; |lights_off|lights[3]        ; padout           ;
+; |lights_off|lights[4]~output ; |lights_off|lights[4]~output ; o                ;
+; |lights_off|lights[4]        ; |lights_off|lights[4]        ; padout           ;
+; |lights_off|lights[5]~output ; |lights_off|lights[5]~output ; o                ;
+; |lights_off|lights[5]        ; |lights_off|lights[5]        ; padout           ;
+; |lights_off|lights[6]~output ; |lights_off|lights[6]~output ; o                ;
+; |lights_off|lights[6]        ; |lights_off|lights[6]        ; padout           ;
+; |lights_off|lights[7]~output ; |lights_off|lights[7]~output ; o                ;
+; |lights_off|lights[7]        ; |lights_off|lights[7]        ; padout           ;
+; |lights_off|lights[8]~output ; |lights_off|lights[8]~output ; o                ;
+; |lights_off|lights[8]        ; |lights_off|lights[8]        ; padout           ;
+; |lights_off|lights[9]~output ; |lights_off|lights[9]~output ; o                ;
+; |lights_off|lights[9]        ; |lights_off|lights[9]        ; padout           ;
+; |lights_off|sw[1]~input      ; |lights_off|sw[1]~input      ; o                ;
+; |lights_off|sw[1]            ; |lights_off|sw[1]            ; padout           ;
+; |lights_off|sw[0]~input      ; |lights_off|sw[0]~input      ; o                ;
+; |lights_off|sw[0]            ; |lights_off|sw[0]            ; padout           ;
+; |lights_off|btn_rand~input   ; |lights_off|btn_rand~input   ; o                ;
+; |lights_off|btn_rand         ; |lights_off|btn_rand         ; padout           ;
+; |lights_off|clk~input        ; |lights_off|clk~input        ; o                ;
+; |lights_off|clk              ; |lights_off|clk              ; padout           ;
+; |lights_off|sw[3]~input      ; |lights_off|sw[3]~input      ; o                ;
+; |lights_off|sw[3]            ; |lights_off|sw[3]            ; padout           ;
+; |lights_off|sw[4]~input      ; |lights_off|sw[4]~input      ; o                ;
+; |lights_off|sw[4]            ; |lights_off|sw[4]            ; padout           ;
+; |lights_off|sw[5]~input      ; |lights_off|sw[5]~input      ; o                ;
+; |lights_off|sw[5]            ; |lights_off|sw[5]            ; padout           ;
+; |lights_off|sw[6]~input      ; |lights_off|sw[6]~input      ; o                ;
+; |lights_off|sw[6]            ; |lights_off|sw[6]            ; padout           ;
+; |lights_off|sw[7]~input      ; |lights_off|sw[7]~input      ; o                ;
+; |lights_off|sw[7]            ; |lights_off|sw[7]            ; padout           ;
+; |lights_off|sw[8]~input      ; |lights_off|sw[8]~input      ; o                ;
+; |lights_off|sw[8]            ; |lights_off|sw[8]            ; padout           ;
+; |lights_off|sw[9]~input      ; |lights_off|sw[9]~input      ; o                ;
+; |lights_off|sw[9]            ; |lights_off|sw[9]            ; padout           ;
+; |lights_off|clk~inputclkctrl ; |lights_off|clk~inputclkctrl ; outclk           ;
++------------------------------+------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++--------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                 ;
++---------------------------+---------------------------+------------------+
+; Node Name                 ; Output Port Name          ; Output Port Type ;
++---------------------------+---------------------------+------------------+
+; |lights_off|Add0~12       ; |lights_off|Add0~13       ; cout             ;
+; |lights_off|Add0~14       ; |lights_off|Add0~14       ; combout          ;
+; |lights_off|Add0~14       ; |lights_off|Add0~15       ; cout             ;
+; |lights_off|Add0~16       ; |lights_off|Add0~16       ; combout          ;
+; |lights_off|Add0~16       ; |lights_off|Add0~17       ; cout             ;
+; |lights_off|Add0~18       ; |lights_off|Add0~18       ; combout          ;
+; |lights_off|rd[6]         ; |lights_off|rd[6]         ; q                ;
+; |lights_off|rd[7]         ; |lights_off|rd[7]         ; q                ;
+; |lights_off|WideOr0~1     ; |lights_off|WideOr0~1     ; combout          ;
+; |lights_off|rd[8]         ; |lights_off|rd[8]         ; q                ;
+; |lights_off|rd[9]         ; |lights_off|rd[9]         ; q                ;
+; |lights_off|WideOr0~2     ; |lights_off|WideOr0~2     ; combout          ;
+; |lights_off|lights~4      ; |lights_off|lights~4      ; combout          ;
+; |lights_off|last[2]       ; |lights_off|last[2]       ; q                ;
+; |lights_off|lights~9      ; |lights_off|lights~9      ; combout          ;
+; |lights_off|lights~12     ; |lights_off|lights~12     ; combout          ;
+; |lights_off|always0~1     ; |lights_off|always0~1     ; combout          ;
+; |lights_off|lights~16     ; |lights_off|lights~16     ; combout          ;
+; |lights_off|lights~19     ; |lights_off|lights~19     ; combout          ;
+; |lights_off|lights~23     ; |lights_off|lights~23     ; combout          ;
+; |lights_off|lights~26     ; |lights_off|lights~26     ; combout          ;
+; |lights_off|lights~27     ; |lights_off|lights~27     ; combout          ;
+; |lights_off|lights~29     ; |lights_off|lights~29     ; combout          ;
+; |lights_off|lights~30     ; |lights_off|lights~30     ; combout          ;
+; |lights_off|lights~34     ; |lights_off|lights~34     ; combout          ;
+; |lights_off|last[2]~3     ; |lights_off|last[2]~3     ; combout          ;
+; |lights_off|btn_fix~input ; |lights_off|btn_fix~input ; o                ;
+; |lights_off|btn_fix       ; |lights_off|btn_fix       ; padout           ;
+; |lights_off|sw[2]~input   ; |lights_off|sw[2]~input   ; o                ;
+; |lights_off|sw[2]         ; |lights_off|sw[2]         ; padout           ;
++---------------------------+---------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                 ;
++---------------------------+---------------------------+------------------+
+; Node Name                 ; Output Port Name          ; Output Port Type ;
++---------------------------+---------------------------+------------------+
+; |lights_off|Add0~12       ; |lights_off|Add0~13       ; cout             ;
+; |lights_off|Add0~14       ; |lights_off|Add0~14       ; combout          ;
+; |lights_off|Add0~14       ; |lights_off|Add0~15       ; cout             ;
+; |lights_off|Add0~16       ; |lights_off|Add0~16       ; combout          ;
+; |lights_off|Add0~16       ; |lights_off|Add0~17       ; cout             ;
+; |lights_off|Add0~18       ; |lights_off|Add0~18       ; combout          ;
+; |lights_off|rd[5]         ; |lights_off|rd[5]         ; q                ;
+; |lights_off|rd[6]         ; |lights_off|rd[6]         ; q                ;
+; |lights_off|rd[7]         ; |lights_off|rd[7]         ; q                ;
+; |lights_off|WideOr0~1     ; |lights_off|WideOr0~1     ; combout          ;
+; |lights_off|rd[8]         ; |lights_off|rd[8]         ; q                ;
+; |lights_off|rd[9]         ; |lights_off|rd[9]         ; q                ;
+; |lights_off|WideOr0~2     ; |lights_off|WideOr0~2     ; combout          ;
+; |lights_off|lights~4      ; |lights_off|lights~4      ; combout          ;
+; |lights_off|last[2]       ; |lights_off|last[2]       ; q                ;
+; |lights_off|lights~9      ; |lights_off|lights~9      ; combout          ;
+; |lights_off|lights~12     ; |lights_off|lights~12     ; combout          ;
+; |lights_off|always0~1     ; |lights_off|always0~1     ; combout          ;
+; |lights_off|lights~16     ; |lights_off|lights~16     ; combout          ;
+; |lights_off|lights~19     ; |lights_off|lights~19     ; combout          ;
+; |lights_off|lights~23     ; |lights_off|lights~23     ; combout          ;
+; |lights_off|lights~26     ; |lights_off|lights~26     ; combout          ;
+; |lights_off|lights~27     ; |lights_off|lights~27     ; combout          ;
+; |lights_off|lights~29     ; |lights_off|lights~29     ; combout          ;
+; |lights_off|lights~30     ; |lights_off|lights~30     ; combout          ;
+; |lights_off|lights~34     ; |lights_off|lights~34     ; combout          ;
+; |lights_off|last[2]~3     ; |lights_off|last[2]~3     ; combout          ;
+; |lights_off|btn_fix~input ; |lights_off|btn_fix~input ; o                ;
+; |lights_off|btn_fix       ; |lights_off|btn_fix       ; padout           ;
+; |lights_off|sw[2]~input   ; |lights_off|sw[2]~input   ; o                ;
+; |lights_off|sw[2]         ; |lights_off|sw[2]         ; padout           ;
++---------------------------+---------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Mon May 15 16:57:13 2023
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off lights_off -c lights_off
+Info: Using vector source file "C:/Users/wilso/Documents/courses/1112/Digital Circuit/lights_off/lights_off.vwf"
+Warning: Wrong node type for node "rd[0]" in vector source file. Design node is of type Buried, but signal in vector source file is of type Output.
+Warning: Wrong node type for node "rd[1]" in vector source file. Design node is of type Buried, but signal in vector source file is of type Output.
+Warning: Wrong node type for node "rd[2]" in vector source file. Design node is of type Buried, but signal in vector source file is of type Output.
+Warning: Wrong node type for node "rd[3]" in vector source file. Design node is of type Buried, but signal in vector source file is of type Output.
+Warning: Wrong node type for node "rd[4]" in vector source file. Design node is of type Buried, but signal in vector source file is of type Output.
+Warning: Wrong node type for node "rd[5]" in vector source file. Design node is of type Buried, but signal in vector source file is of type Output.
+Warning: Wrong node type for node "rd[6]" in vector source file. Design node is of type Buried, but signal in vector source file is of type Output.
+Warning: Wrong node type for node "rd[7]" in vector source file. Design node is of type Buried, but signal in vector source file is of type Output.
+Warning: Wrong node type for node "rd[8]" in vector source file. Design node is of type Buried, but signal in vector source file is of type Output.
+Warning: Wrong node type for node "rd[9]" in vector source file. Design node is of type Buried, but signal in vector source file is of type Output.
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      79.47 %
+Info: Number of transitions in simulation is 2089
+Info: Quartus II Simulator was successful. 0 errors, 10 warnings
+    Info: Peak virtual memory: 163 megabytes
+    Info: Processing ended: Mon May 15 16:57:13 2023
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
+
+

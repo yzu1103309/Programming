@@ -1,0 +1,64 @@
+module MOORE_BIN1(clk, Din, rst, Qout);
+
+	input clk, rst, Din;
+	output reg Qout;
+	
+	//Declare
+	parameter [1:0]
+		S0 = 2'b00,
+		S1 = 2'b01,
+		S2 = 2'b10,
+		S3 = 2'b11;
+	
+	reg [1:0] CS; //Current State
+	reg [1:0] NS; //Next state
+	
+	always @ (posedge clk or posedge rst)
+	begin
+		if(rst == 1'b1)
+			CS = S0;
+		else
+			CS = NS;
+	end
+		
+	always @ (CS or Din)
+	begin
+		case (CS)
+			S0 : 
+			begin
+				Qout = 1'b0;
+				if(Din == 1'b0)
+					NS = S0;
+				else
+					NS = S2;
+			end
+			
+			S1: 
+			begin
+				Qout = 1'b1;
+				if(Din == 1'b0)
+					NS = S0;
+				else 
+					NS = S2;
+			end
+			
+			S2: 
+			begin
+				Qout = 1'b1;
+				if(Din == 1'b0)
+					NS = S2;
+				else 
+					NS = S3;
+			end
+			
+			S3: 
+			begin
+				Qout = 1'b0;
+				if(Din == 1'b0)
+					NS = S3;
+				else 
+					NS = S1;
+			end
+		endcase
+	end
+endmodule 

@@ -1,0 +1,65 @@
+module Sequence_detector(clk, str_in, rst, str_out, match);
+
+	input clk, rst, str_in;
+	output reg [2:0]str_out;
+	output reg match;
+	
+	parameter
+	s0 = 2'b00,
+	s1 = 2'b01,
+	s2 = 2'b10,
+	s3 = 2'b11;
+	
+	reg [1:0]cs;
+	reg [1:0]ns;
+	
+	always @ (posedge clk or posedge rst)
+	begin
+		if(rst)
+		begin
+			cs = s0;
+			str_out = 3'b000;
+			match = 1'b0;
+		end
+		else
+		begin
+			cs = ns;
+			str_out = (str_out << 1) | str_in;
+			match = (cs == s3 && str_in == 0); 
+		end
+	end
+	
+	always @ (cs or str_in)
+	begin
+		case(cs)
+			s0: 
+			begin
+				if(str_in == 1'b0)
+					ns = s0;
+				else
+					ns = s1;
+			end
+			s1:
+			begin
+				if(str_in == 1'b0)
+					ns = s0;
+				else
+					ns = s2;
+			end
+			s2:
+			begin
+				if(str_in == 1'b0)
+					ns = s3;
+				else
+					ns = s2;
+			end
+			s3:
+			begin
+				if(str_in == 1'b0)
+					ns = s1;
+				else
+					ns = s0;
+			end
+		endcase
+	end
+endmodule 

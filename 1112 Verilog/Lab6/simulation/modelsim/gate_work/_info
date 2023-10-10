@@ -1,0 +1,36 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\wilso\Documents\courses\1112\Digital Circuit\Lab6\simulation\modelsim
+vALU
+I5SDM59:JAV8im79e=7A=D0
+V2ZK1U><Neae^I5fdPjP`71
+w1679880511
+8ALU.vo
+FALU.vo
+L0 31
+Z1 OV;L;6.5b;42
+r1
+31
+Z2 o-vlog01compat -work work -O0
+n@a@l@u
+!s100 JQhEGmbeOZfUP1omcRRni1
+!s85 0
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+. -O0
+vtest
+!s100 lZ6aV?nVniKUWnI7E?Xj02
+ID:QcW>=a6g2MQ>=P?gK3G0
+Vk<3<[f=78GX=_HO53D;7>3
+w1679880177
+8C:/Users/wilso/Documents/courses/1112/Digital Circuit/Lab6/test.v
+FC:/Users/wilso/Documents/courses/1112/Digital Circuit/Lab6/test.v
+L0 2
+R1
+r1
+!s85 0
+31
+!s101 -O0
+R2
+!s92 -vlog01compat -work work {+incdir+C:/Users/wilso/Documents/courses/1112/Digital Circuit/Lab6} -O0

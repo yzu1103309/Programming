@@ -1,0 +1,56 @@
+|LFSR
+seed => seed~0.IN1
+enable => enable~0.IN1
+clk => clk~0.IN6
+D[0] <= D[0]~4.DB_MAX_OUTPUT_PORT_TYPE
+D[1] <= D[1]~3.DB_MAX_OUTPUT_PORT_TYPE
+D[2] <= D[2]~2.DB_MAX_OUTPUT_PORT_TYPE
+D[3] <= D[3]~1.DB_MAX_OUTPUT_PORT_TYPE
+D[4] <= D[4]~0.DB_MAX_OUTPUT_PORT_TYPE
+D[5] <= D_flip_flop:comb_10.port0
+
+
+|LFSR|mux:comb_4
+OUT <= OR1.DB_MAX_OUTPUT_PORT_TYPE
+A => AND1.IN0
+B => AND2.IN0
+SEL => AND2.IN1
+SEL => AND1.IN1
+
+
+|LFSR|D_flip_flop:comb_5
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+D => Q~reg0.DATAIN
+Clk => Q~reg0.CLK
+
+
+|LFSR|D_flip_flop:comb_6
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+D => Q~reg0.DATAIN
+Clk => Q~reg0.CLK
+
+
+|LFSR|D_flip_flop:comb_7
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+D => Q~reg0.DATAIN
+Clk => Q~reg0.CLK
+
+
+|LFSR|D_flip_flop:comb_8
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+D => Q~reg0.DATAIN
+Clk => Q~reg0.CLK
+
+
+|LFSR|D_flip_flop:comb_9
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+D => Q~reg0.DATAIN
+Clk => Q~reg0.CLK
+
+
+|LFSR|D_flip_flop:comb_10
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+D => Q~reg0.DATAIN
+Clk => Q~reg0.CLK
+
+

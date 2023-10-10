@@ -1,0 +1,413 @@
+Analysis & Synthesis report for lights_off
+Mon Jun 05 16:53:09 2023
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: Top-level Entity: |lights_off
+ 12. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                      ;
++------------------------------------+----------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Jun 05 16:53:09 2023        ;
+; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
+; Revision Name                      ; lights_off                                   ;
+; Top-level Entity Name              ; lights_off                                   ;
+; Family                             ; Cyclone III                                  ;
+; Total logic elements               ; 212                                          ;
+;     Total combinational functions  ; 202                                          ;
+;     Dedicated logic registers      ; 68                                           ;
+; Total registers                    ; 68                                           ;
+; Total pins                         ; 37                                           ;
+; Total virtual pins                 ; 0                                            ;
+; Total memory bits                  ; 0                                            ;
+; Embedded Multiplier 9-bit elements ; 0                                            ;
+; Total PLLs                         ; 0                                            ;
++------------------------------------+----------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP3C16F484C6       ;                    ;
+; Top-level entity name                                                      ; lights_off         ; lights_off         ;
+; Family name                                                                ; Cyclone III        ; Stratix II         ;
+; Type of Retiming Performed During Resynthesis                              ; Full               ;                    ;
+; Resynthesis Optimization Effort                                            ; Normal             ;                    ;
+; Physical Synthesis Level for Resynthesis                                   ; Normal             ;                    ;
+; Use Generated Physical Constraints File                                    ; On                 ;                    ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Show Parameter Settings Tables in Synthesis Report                         ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 16     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                      ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                  ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------+
+; lights_off.v                     ; yes             ; User Verilog HDL File  ; C:/Users/wilso/Documents/courses/1112/Digital Circuit/lights_off/lights_off.v ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 212       ;
+;                                             ;           ;
+; Total combinational functions               ; 202       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 107       ;
+;     -- 3 input functions                    ; 27        ;
+;     -- <=2 input functions                  ; 68        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 145       ;
+;     -- arithmetic mode                      ; 57        ;
+;                                             ;           ;
+; Total registers                             ; 68        ;
+;     -- Dedicated logic registers            ; 68        ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 37        ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 68        ;
+; Total fan-out                               ; 845       ;
+; Average fan-out                             ; 2.46      ;
++---------------------------------------------+-----------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                               ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name       ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------+--------------+
+; |lights_off                ; 202 (188)         ; 68 (68)      ; 0           ; 0            ; 0       ; 0         ; 37   ; 0            ; |lights_off               ; work         ;
+;    |segment:timer|         ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lights_off|segment:timer ;              ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++-----------------------------------------+--------------------------------------+
+; Register name                           ; Reason for Removal                   ;
++-----------------------------------------+--------------------------------------+
+; rd[0]                                   ; Merged with fr[0]                    ;
+; rd[1]                                   ; Merged with fr[1]                    ;
+; rd[2]                                   ; Merged with fr[2]                    ;
+; rd[3]                                   ; Merged with fr[3]                    ;
+; rd[4]                                   ; Merged with fr[4]                    ;
+; rd[5]                                   ; Merged with fr[5]                    ;
+; rd[6]                                   ; Merged with fr[6]                    ;
+; rd[7]                                   ; Merged with fr[7]                    ;
+; rd[8]                                   ; Merged with fr[8]                    ;
+; rd[9]                                   ; Merged with fr[9]                    ;
+; cd_fr[0]                                ; Merged with fr[0]                    ;
+; cd_fr[1]                                ; Merged with fr[1]                    ;
+; cd_fr[2]                                ; Merged with fr[2]                    ;
+; cd_fr[3]                                ; Merged with fr[3]                    ;
+; cd_fr[4]                                ; Merged with fr[4]                    ;
+; cd_fr[5]                                ; Merged with fr[5]                    ;
+; cd_fr[6]                                ; Merged with fr[6]                    ;
+; cd_fr[7]                                ; Merged with fr[7]                    ;
+; cd_fr[8]                                ; Merged with fr[8]                    ;
+; cd_fr[9]                                ; Merged with fr[9]                    ;
+; cd_fr[10]                               ; Merged with fr[10]                   ;
+; cd_fr[11]                               ; Merged with fr[11]                   ;
+; cd_fr[12]                               ; Merged with fr[12]                   ;
+; cd_fr[13]                               ; Merged with fr[13]                   ;
+; cd_fr[14]                               ; Merged with fr[14]                   ;
+; cd_fr[15]                               ; Merged with fr[15]                   ;
+; cd_fr[16]                               ; Merged with fr[16]                   ;
+; cd_fr[17]                               ; Merged with fr[17]                   ;
+; cd_fr[18]                               ; Merged with fr[18]                   ;
+; cd_fr[19]                               ; Merged with fr[19]                   ;
+; cd_fr[20]                               ; Merged with fr[20]                   ;
+; cd_fr[21]                               ; Merged with fr[21]                   ;
+; cd_fr[22]                               ; Merged with fr[22]                   ;
+; cd_fr[23]                               ; Merged with fr[23]                   ;
+; segment:timer|seg~0                     ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~1                     ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~2                     ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~3                     ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~4                     ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~5                     ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~6                     ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~7                     ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~8                     ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~9                     ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~10                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~11                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~12                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~13                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~14                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~15                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~16                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~17                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~18                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~19                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~20                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~21                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~22                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~23                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~24                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~25                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~26                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~27                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~28                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~29                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~30                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~31                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~32                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~33                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~34                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~35                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~36                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~37                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~38                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~39                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~40                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~41                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~42                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~43                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~44                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~45                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~46                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~47                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~48                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~49                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~50                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~51                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~52                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~53                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~54                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~55                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~56                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~57                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~58                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~59                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~60                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~61                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~62                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~63                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~64                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~65                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~66                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~67                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~68                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~69                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~70                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~71                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~72                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~73                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~74                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~75                    ; Stuck at GND due to stuck port clock ;
+; segment:timer|seg~76                    ; Stuck at GND due to stuck port clock ;
+; Total Number of Removed Registers = 111 ;                                      ;
++-----------------------------------------+--------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 68    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 3     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |lights_off|lights[1]~reg0 ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |lights_off|cnt            ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; No         ; |lights_off|cnt            ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |lights_off|lights         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |lights_off ;
++----------------+------------+----------------------------------------------+
+; Parameter Name ; Value      ; Type                                         ;
++----------------+------------+----------------------------------------------+
+; c9             ; 1100000000 ; Unsigned Binary                              ;
+; c8             ; 1110000000 ; Unsigned Binary                              ;
+; c7             ; 0111000000 ; Unsigned Binary                              ;
+; c6             ; 0011100000 ; Unsigned Binary                              ;
+; c5             ; 0001110000 ; Unsigned Binary                              ;
+; c4             ; 0000111000 ; Unsigned Binary                              ;
+; c3             ; 0000011100 ; Unsigned Binary                              ;
+; c2             ; 0000001110 ; Unsigned Binary                              ;
+; c1             ; 0000000111 ; Unsigned Binary                              ;
+; c0             ; 0000000011 ; Unsigned Binary                              ;
++----------------+------------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Mon Jun 05 16:53:08 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lights_off -c lights_off
+Info: Found 2 design units, including 2 entities, in source file lights_off.v
+    Info: Found entity 1: lights_off
+    Info: Found entity 2: segment
+Info: Elaborating entity "lights_off" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at lights_off.v(13): object "fix_last" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at lights_off.v(72): object "seg" assigned a value but never read
+Warning (10230): Verilog HDL assignment warning at lights_off.v(100): truncated value with size 32 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at lights_off.v(101): truncated value with size 32 to match size of target (24)
+Warning (10230): Verilog HDL assignment warning at lights_off.v(102): truncated value with size 32 to match size of target (26)
+Warning (10230): Verilog HDL assignment warning at lights_off.v(228): truncated value with size 32 to match size of target (2)
+Warning (10030): Net "q.data_a" at lights_off.v(62) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "q.waddr_a" at lights_off.v(62) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "q.we_a" at lights_off.v(62) has no driver or initial value, using a default initial value '0'
+Info: Elaborating entity "segment" for hierarchy "segment:timer"
+Warning (10030): Net "seg.data_a" at lights_off.v(246) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "seg.waddr_a" at lights_off.v(246) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "seg.we_a" at lights_off.v(246) has no driver or initial value, using a default initial value '0'
+Info: Found 2 instances of uninferred RAM logic
+    Info: RAM logic "segment:timer|seg" is uninferred due to inappropriate RAM size
+    Info: RAM logic "q" is uninferred due to inappropriate RAM size
+Critical Warning: Memory depth (16) in the design file differs from memory depth (11) in the Memory Initialization File "lights_off.ram0_segment_b1ef0119.hdl.mif" -- setting initial value for remaining addresses to 0
+Info: Timing-Driven Synthesis is running
+Info: Implemented 276 device resources after synthesis - the final resource count might be different
+    Info: Implemented 13 input pins
+    Info: Implemented 24 output pins
+    Info: Implemented 239 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 13 warnings
+    Info: Peak virtual memory: 229 megabytes
+    Info: Processing ended: Mon Jun 05 16:53:09 2023
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

@@ -1,0 +1,4 @@
+/snap/clion/209/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/snap/clion/209/bin/ninja/linux/ninja -G Ninja -S "/home/wilson/Documents/courses/1111/data structure/HW6/uva732" -B "/home/wilson/Documents/courses/1111/data structure/HW6/uva732/cmake-build-debug"
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/wilson/Documents/courses/1111/data structure/HW6/uva732/cmake-build-debug

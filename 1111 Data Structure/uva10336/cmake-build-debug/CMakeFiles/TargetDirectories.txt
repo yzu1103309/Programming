@@ -1,0 +1,3 @@
+/home/wilson/Documents/courses/1111/data structure/uva10336/cmake-build-debug/CMakeFiles/uva10336.dir
+/home/wilson/Documents/courses/1111/data structure/uva10336/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/wilson/Documents/courses/1111/data structure/uva10336/cmake-build-debug/CMakeFiles/rebuild_cache.dir
